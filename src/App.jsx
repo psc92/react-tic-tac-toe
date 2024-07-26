@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Square from "./components/Square";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [xIsNext, setXIsNext] = useState(true);
@@ -42,6 +43,7 @@ function App() {
         Reset
       </button>
       <div className="grid grid-cols-3 gap-[1px]">{squares}</div>
+      <Analytics />
     </main>
   );
 }
